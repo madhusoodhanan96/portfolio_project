@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!doctype html>
+<html>
+
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<style>
+  .login-container{
+      margin-top: 5%;
+      margin-bottom: 5%;
+  }
+  .login-logo{
+      position: relative;
+      margin-left: -41.5%;
+  }
+  .login-logo img{
+      position: absolute;
+      width: 20%;
+      margin-top: 19%;
+      background: #282726;
+      border-radius: 4.5rem;
+      padding: 5%;
+  }
+  .login-form-1{
+      padding: 9%;
+      background:#282726;
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  }
+  .login-form-1 h3{
+      text-align: center;
+      margin-bottom:12%;
+      color:#fff;
+  }
+  .btnSubmit{
+      font-weight: 600;
+      width: 50%;
+      color: #282726;
+      background-color: #fff;
+      border: none;
+      border-radius: 1.5rem;
+      padding:2%;
+  }
+  .btnForgetPwd{
+      color: #fff;
+      font-weight: 300;
+      text-decoration: none;
+  }
+  .btnForgetPwd:hover{
+      font-weight: 700;
+      text-decoration:none;
+      color:red;
+  }
+</style>
+
+<script>
+  {% if message %}
+    alert('{{ message }}');
+  {% endif %}
+</script>
+
+<body>
+<div class="container login-container">
+            <div class="row">
+                <form class="col-md-6 login-form-1" method="POST" action="{% url 'signup' %}">
+                  {% csrf_token %}
+                    <h3>Sign Up</h3>
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="User ID *"  name="username" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email *" name="email" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password *" name="pass1" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Re-Enter Password *" name="pass2" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btnForgetPwd navbar-toggler" type="submit" value="Register">
+                        </div>
+                        <div/>
+                        <div style="color:white; font-weight:200">* Required Fields</div>
+                </form>
+            </div>
+        </div>
+</body>
+
+</html>
+{% endblock %}
