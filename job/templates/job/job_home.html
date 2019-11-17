@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load staticfiles %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,6 +28,10 @@
     user-select: none;
   }
 
+  .circular--square {
+  border-radius: 50%;
+}
+
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
@@ -47,7 +52,7 @@
         <h2 class="jumbotron-heading"> '@' VISHAL </h2>
         <p class="lead text-muted">I’m an enthusiastic, self-motivated, friendly person and very willing to learn and develop new skills.</p>
         <p>
-          <a href="#" class="btn btn-secondary my-2">My Resume</a>
+          <img src="{% static 'photo.jpg' %}" class="img-fluid circular--square"  width="250" height="50"/>
         </p>
       </div>
     </section>

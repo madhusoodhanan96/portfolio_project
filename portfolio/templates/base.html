@@ -37,7 +37,7 @@
 
 <header>
 
-  <div class="collapse bg-dark " id="navbarHeader">
+  <div class="collapse bg-dark fixed-top" id="navbarHeader">
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
@@ -56,7 +56,15 @@
   </div>
 
   <div class="navbar fixed-bottom navbar-dark bg-dark shadow-sm">
-    <div class="container d-flex justify-content-between">
+    <div class="container d-flex">
+
+      <a href="#"> <span class="fa fa-user-circle" target="_blank" style="font-size:26px; color:white"></span>
+      <strong style="color:white">Hey! Amigo</strong></a>
+
+      <a href="#" class="navbar-brand d-flex">
+        <strong><a href="{% url 'home' %}" class="nav-item nav-link active text-white">Home</a></strong>
+      </a>
+
       <a href="#" class="navbar-brand d-flex">
         <strong><a href="{% url 'blog_home' %}" class="nav-item nav-link active text-white">Blog</a></strong>
       </a>
@@ -72,8 +80,16 @@
       </strong>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
-        <strong>Click => </strong><span class="navbar-toggler-icon"></span>
+        <strong>Know More</strong>
       </button>
+
+      <a href="#" class="navbar-brand d-flex">
+        <strong><a href="#" class="nav-item nav-link active text-white">SIGN IN</a></strong>
+      </a>
+      <a href="#" class="navbar-brand d-flex">
+        <strong><a href="#" class="nav-item nav-link active text-white">SIGN UP</a></strong>
+      </a>
+
     </div>
   </div>
 
