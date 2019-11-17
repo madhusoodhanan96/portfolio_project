@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="author" content="Madhusoodhanan">
   <meta name="generator" content="Bootstrap">
-  <title>Madhusoodhanan A</title>
+  <title>мα∂нυѕσσ∂нαηαη</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -57,51 +57,54 @@
 
   <div class="navbar navbar-expand-sm fixed-bottom navbar-dark bg-dark shadow-sm" color=#282726>
     <div class="container d-flex">
-
-      <a href="#"> <span class="fa fa-user-circle" target="_blank" style="font-size:26px; color:white"></span>
-
-      {% if user.is_authenticated %}
-      <strong style="color:white">Hey! {{user.username}}</strong></a>
-      {% else %}
-      <strong style="color:white">Hey! Amigo</strong></a>
-      {% endif %}
+      <span style="color:white">𝖒𝖆𝖉𝖍𝖚𝖘𝖔𝖔𝖉𝖍𝖆𝖓𝖆𝖓 © {% now 'Y' %} &nbsp &nbsp</span>
 
       <a href="#" class="navbar-brand d-flex">
-        <strong><a href="{% url 'home' %}" class="nav-item nav-link active text-white">Home</a></strong>
+        <strong><a href="{% url 'home' %}" class="nav-item nav-link active text-white">&nbspHome&nbsp</a></strong>
       </a>
 
       <a href="#" class="navbar-brand d-flex">
-        <strong><a href="{% url 'blog_home' %}" class="nav-item nav-link active text-white">Blog</a></strong>
+        <strong><a href="{% url 'blog_home' %}" class="nav-item nav-link active text-white">&nbspBlog&nbsp</a></strong>
       </a>
 
-      <strong style="color:white">Find me on -
-      <a href="#"> <span class="fa fa-github" target="_blank" style="font-size:26px; color:white"></span></a>
-      <a href="https://www.linkedin.com/in/madhusoodhanan-a/"> <span class="fa fa-linkedin-square" target="_blank" style="font-size:26px; color:white"></span></a>
-      <a href="https://www.facebook.com/madhusoodhanan1996"> <span class="fa fa-facebook-square" target="_blank" style="font-size:24px; color:white"></span></a>
-      <a href="#"> <span class="fa fa-instagram" target="_blank" style="font-size:26px; color:white"></span></a>
-      <a href="#"> <span class="fa fa-twitter" target="_blank" style="font-size:26px; color:white"></span></a>
-      <a href="#"> <span class="fa fa-telegram" style="font-size:26px; color:white"></span></a>
-      <a href="#"> <span class="fa fa-skype" target="_blank" target="_blank" style="font-size:26px; color:white"></span></a>
-      <a href="#"> <span class="fa fa-steam-square" target="_blank" style="font-size:26px; color:white"></span></a>
+      <strong style="color:white">
+      <a href="https://github.com/madhusoodhanan96" target="_blank"> <span class="fa fa-github"  style="font-size:26px; color:white"></span></a>
+      <a href="https://www.linkedin.com/in/madhusoodhanan-a/"target="_blank"> <span class="fa fa-linkedin-square" style="font-size:26px; color:white"></span></a>
+      <a href="https://www.facebook.com/madhusoodhanan1996" target="_blank"> <span class="fa fa-facebook-square" style="font-size:24px; color:white"></span></a>
+      <a href="https://www.instagram.com/madhusoodhanan_a/" target="_blank"> <span class="fa fa-instagram" style="font-size:26px; color:white"></span></a>
+      <a href="https://twitter.com/_madhusoodhanan" target="_blank"> <span class="fa fa-twitter" style="font-size:26px; color:white"></span></a>
+      <a href="https://t.me/PoisonedAce" target="_blank"> <span class="fa fa-telegram" style="font-size:26px; color:white"></span></a>
+      <a href="skype:madhusoodhanan_vishal96?userinfo" target="_blank"> <span class="fa fa-skype" style="font-size:26px; color:white"></span></a>
+      <a href="https://steamcommunity.com/id/madvishal96/" target="_blank"> <span class="fa fa-steam-square" style="font-size:26px; color:white"></span></a>
       </strong>
 
       <a href="#" class="navbar-brand d-flex">
-        <strong><a href="#" class="nav-item nav-link active text-white">Know More</a></strong>
+        <strong><a href="#" class="nav-item nav-link active text-white">&nbspKnow More&nbsp</a></strong>
       </a>
+
+      <a href="#">
+        <span class="fa fa-user-circle" target="_blank" style="font-size:26px; color:white"></span>
+        {% if user.is_authenticated %}
+        <strong style="color:white">&nbspHey!&nbsp{{user.username}}&nbsp</strong>
+        {% else %}
+        <a href="{% url 'login' %}"><strong style="color:white">&nbsp&nbspHey!&nbspAmigo&nbsp</strong></a>
+        {% endif %}
+      </a>
+
       {% if user.is_authenticated %}
 
-      <a class="nav-item nav-link" href="javascript:{document.getElementById('logout').submit()}"> <span class="fa fa-sign-out" style="font-size:26px; color:white"></span></a>
+      <a class="nav-item nav-link" href="javascript:{document.getElementById('logout').submit()}"> <span class="fa fa-sign-out" style="font-size:24px; color:white"></span></a>
       <form id="logout" method="POST" action="{% url 'logout' %}">
       {% csrf_token %}
       <input type="hidden"/>
       </form>
       {% else %}
       <a href="#" class="navbar-brand d-flex">
-        <strong><a href="{% url 'login' %}" class="nav-item nav-link active text-white">SIGN IN</a></strong>
+        <strong><a href="{% url 'login' %}" class="nav-item nav-link active text-white">&nbspLogin&nbsp</a></strong>
       </a>
 
       <a href="#" class="navbar-brand d-flex">
-        <strong><a href="{% url 'signup' %}" class="nav-item nav-link active text-white">SIGN UP</a></strong>
+        <strong><a href="{% url 'signup' %}" class="nav-item nav-link active text-white">&nbspSignup&nbsp</a></strong>
       </a>
       {% endif %}
     </div>
