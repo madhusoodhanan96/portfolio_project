@@ -56,40 +56,37 @@
   </div>
 
   <div class="navbar navbar-expand-sm fixed-bottom navbar-dark bg-dark shadow-sm" color=#282726>
-    <div class="container d-flex">
-      <span style="color:white">𝖒𝖆𝖉𝖍𝖚𝖘𝖔𝖔𝖉𝖍𝖆𝖓𝖆𝖓 © {% now 'Y' %} &nbsp &nbsp</span>
+    <div class="collapse navbar-collapse d-flex">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a href="#" class="navbar-brand d-flex">
+          <strong><a href="{% url 'home' %}" class="nav-item nav-link active text-white">&nbspHome&nbsp</a></strong>
+        </a></li>
 
-      <a href="#" class="navbar-brand d-flex">
-        <strong><a href="{% url 'home' %}" class="nav-item nav-link active text-white">&nbspHome&nbsp</a></strong>
-      </a>
+        <li class="nav-item"><a href="#" class="navbar-brand d-flex">
+          <strong><a href="{% url 'blog_home' %}" class="nav-item nav-link active text-white">&nbspBlog&nbsp</a></strong>
+        </a></li>
+      </ul>
 
-      <a href="#" class="navbar-brand d-flex">
-        <strong><a href="{% url 'blog_home' %}" class="nav-item nav-link active text-white">&nbspBlog&nbsp</a></strong>
-      </a>
+      <div class="collapse navbar-collapse justify-content-md-center">
+        <ul class="navbar-nav">
 
-      <strong style="color:white">
-      <a href="https://github.com/madhusoodhanan96" target="_blank"> <span class="fa fa-github"  style="font-size:26px; color:white"></span></a>
-      <a href="https://www.linkedin.com/in/madhusoodhanan-a/"target="_blank"> <span class="fa fa-linkedin-square" style="font-size:26px; color:white"></span></a>
-      <a href="https://www.facebook.com/madhusoodhanan1996" target="_blank"> <span class="fa fa-facebook-square" style="font-size:24px; color:white"></span></a>
-      <a href="https://www.instagram.com/madhusoodhanan_a/" target="_blank"> <span class="fa fa-instagram" style="font-size:26px; color:white"></span></a>
-      <a href="https://twitter.com/_madhusoodhanan" target="_blank"> <span class="fa fa-twitter" style="font-size:26px; color:white"></span></a>
-      <a href="https://t.me/PoisonedAce" target="_blank"> <span class="fa fa-telegram" style="font-size:26px; color:white"></span></a>
-      <a href="skype:madhusoodhanan_vishal96?userinfo" target="_blank"> <span class="fa fa-skype" style="font-size:26px; color:white"></span></a>
-      <a href="https://steamcommunity.com/id/madvishal96/" target="_blank"> <span class="fa fa-steam-square" style="font-size:26px; color:white"></span></a>
-      </strong>
+          <li class="nav-item"><span style="color:white">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp𝖒𝖆𝖉𝖍𝖚𝖘𝖔𝖔𝖉𝖍𝖆𝖓𝖆𝖓 © {% now 'Y' %} &nbsp &nbsp</span></li>
 
-      <a href="#" class="navbar-brand d-flex">
-        <strong><a href="#" class="nav-item nav-link active text-white">&nbspKnow More&nbsp</a></strong>
-      </a>
+          <!-- li class="nav-item">
+            <strong style="color:white">
+            <a href="https://github.com/madhusoodhanan96" target="_blank"> <span class="fa fa-github"  style="font-size:26px; color:white"></span></a>
+            <a href="https://www.linkedin.com/in/madhusoodhanan-a/"target="_blank"> <span class="fa fa-linkedin-square" style="font-size:26px; color:white"></span></a>
+            <a href="https://www.facebook.com/madhusoodhanan1996" target="_blank"> <span class="fa fa-facebook-square" style="font-size:24px; color:white"></span></a>
+            <a href="https://www.instagram.com/madhusoodhanan_a/" target="_blank"> <span class="fa fa-instagram" style="font-size:26px; color:white"></span></a>
+            <a href="https://twitter.com/_madhusoodhanan" target="_blank"> <span class="fa fa-twitter" style="font-size:26px; color:white"></span></a>
+            <a href="https://t.me/PoisonedAce" target="_blank"> <span class="fa fa-telegram" style="font-size:26px; color:white"></span></a>
+            <a href="skype:madhusoodhanan_vishal96?userinfo" target="_blank"> <span class="fa fa-skype" style="font-size:26px; color:white"></span></a>
+            <a href="https://steamcommunity.com/id/madvishal96/" target="_blank"> <span class="fa fa-steam-square" style="font-size:26px; color:white"></span></a>
+            </strong>
+          </li -->
 
-      <a href="#">
-        <span class="fa fa-user-circle" target="_blank" style="font-size:26px; color:white"></span>
-        {% if user.is_authenticated %}
-        <strong style="color:white">&nbspHey!&nbsp{{user.username}}&nbsp</strong>
-        {% else %}
-        <a href="{% url 'login' %}"><strong style="color:white">&nbsp&nbspHey!&nbspAmigo&nbsp</strong></a>
-        {% endif %}
-      </a>
+        </ul>
+      </div>
 
       {% if user.is_authenticated %}
 
@@ -107,6 +104,17 @@
         <strong><a href="{% url 'signup' %}" class="nav-item nav-link active text-white">&nbspSignup&nbsp</a></strong>
       </a>
       {% endif %}
+
+
+      <a href="#" class="my-2 my-md-0">
+        {% if user.is_authenticated %}
+        <strong style="color:white">&nbspHey!&nbsp{{user.username}}&nbsp</strong>
+        {% else %}
+        <a href="{% url 'login' %}"><strong style="color:white">&nbsp&nbspHey!&nbspAmigo&nbsp</strong></a>
+        {% endif %}
+        <span class="fa fa-user-circle" target="_blank" style="font-size:26px; color:white"></span>
+      </a>
+
     </div>
   </div>
 
