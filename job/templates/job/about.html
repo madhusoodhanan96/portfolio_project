@@ -1,0 +1,99 @@
+{% load static %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<head>
+<!--This stylesheet should be moved to the head of the document -->
+<style>
+  @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
+
+
+.social-btn-holder{
+  padding:10px;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+.social-btn-holder .btn-social{
+  font-size:12px;
+  font-weight:bold;
+}
+
+.btn-social{
+  color: white;
+  opacity:0.9;
+}
+.btn-social:hover {
+  color: white;
+  opacity:1;
+}
+
+
+.centered-text{
+  text-align: center;
+}
+
+.circular--square {
+border-radius: 50%;
+}
+
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<div class="jumbotron ">
+    <div class="row">
+        <div class=" col-lg-offset-3 col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
+                                  <img src="{% static 'photo.jpg' %}" class="img-fluid circular--square"  width="200" height="250"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="centered-text col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
+                                    <div itemscope="" itemtype="http://schema.org/Person">
+                                        <h2> <span itemprop="name">Madhusoodhanan A</span></h2>
+                                        <p itemprop="jobTitle">Systems Engineer</p>
+                                        <p><span itemprop="affiliation">Infosys Limited</span></p>
+                                        <p>
+                                            <i class="fa fa-map-marker"></i> <span itemprop="addressRegion"> Chennai, Tamil Nafu</span>
+                                        </p>
+                                        <p itemprop="email"> <i class="fa fa-envelope"> </i> <a href="mailto:a.madhusoodhanan1996@gmail.com">a.madhusoodhanan1996@gmail.com</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 centered-text">
+                            I am a well organized person and always plan ahead to make sure I manage my time well. I work well both in a team environment as well as using own initiative at all challenging situations. I'm looking for a challenging career that enhances my skills and also help learning new technologies.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                          <center><li class="nav-item" style="center">
+                            <strong style="font-size:20px; color:black">
+                            <a href="https://github.com/madhusoodhanan96" target="_blank"> <span class="fa fa-github"  style="font-size:26px; color:black"></span></a>
+                            <a href="https://www.linkedin.com/in/madhusoodhanan-a/"target="_blank"> <span class="fa fa-linkedin-square" style="font-size:26px; color:black"></span></a>
+                            <a href="https://www.facebook.com/madhusoodhanan1996" target="_blank"> <span class="fa fa-facebook-square" style="font-size:24px; color:black"></span></a>
+                            <a href="https://www.instagram.com/madhusoodhanan_a/" target="_blank"> <span class="fa fa-instagram" style="font-size:26px; color:black"></span></a>
+                            <a href="https://twitter.com/_madhusoodhanan" target="_blank"> <span class="fa fa-twitter" style="font-size:26px; color:black"></span></a>
+                            <a href="https://t.me/PoisonedAce" target="_blank"> <span class="fa fa-telegram" style="font-size:26px; color:black"></span></a>
+                            <a href="skype:madhusoodhanan_vishal96?userinfo" target="_blank"> <span class="fa fa-skype" style="font-size:26px; color:black"></span></a>
+                            <a href="https://steamcommunity.com/id/madvishal96/" target="_blank"> <span class="fa fa-steam-square" style="font-size:26px; color:black"></span></a>
+                            </strong>
+                          </li></center>
+            </div>
+        </div>
+        <center>
+          <strong><a href="{% url 'blog_home' %}" class="nav-item nav-link active text-white">Blog</a>&nbsp&nbsp
+          <a href="{% url 'home' %}" class="nav-item nav-link active text-white">Home</a></strong>
+        </center>
+    </div>
+</div>
